@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                export HOME=/var/jenkins_home
+                echo $HOME
                 sh 'mvn -B -DskipTests clean package'
             }
         }
